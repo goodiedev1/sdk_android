@@ -30,9 +30,11 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import rx.Observable;
 
 /**
@@ -97,9 +99,8 @@ public enum GoodieApis {
     }
 
     public Observable<MemberPointResponse> doMemberPoint(String authToken, String deviceUniqId, String memberId, String merchantId, Context context) {
-        return api.memberPoint(authToken, deviceUniqId, GoodieModel.setMemberPointRequest(memberId, merchantId, context));
+        return api.memberPoint("application/x-www-form-urlencoded", authToken, deviceUniqId, memberId, merchantId);
     }
-
 
     public Observable<PromotionInquiryResponse> doPromotionInquiry(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
                                                                    BasicRulesReq basicRulesReq, List<CustomRulesReq> customRulesReq, Context context) {
@@ -141,13 +142,19 @@ public enum GoodieApis {
         @POST("member/profile/registration")
         Observable<RegisterResponse> register(@Body RegisterRequest request);
 
+
         @POST("member/registration/verification")
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
 
-        @POST("member/points")
-        Observable<MemberPointResponse> memberPoint(@Header("authToken")  String authToken,
+
+        @GET("member/points/{memberId}/{merchantId}")
+        Observable<MemberPointResponse> memberPoint(@Header("Content-Type") String contentType,
+                                                    @Header("authToken")  String authToken,
                                                     @Header("deviceUniqueId")  String deviceUniqId,
-                                                    @Body MemberPointRequest request);
+                                                    @Path("memberId") String memberId,
+                                                    @Path("merchantId") String merchantId
+        );
+
 
         @POST("promotion/inquiry")
         Observable<PromotionInquiryResponse> promotionInquiry(@Header("authToken")  String authToken,
