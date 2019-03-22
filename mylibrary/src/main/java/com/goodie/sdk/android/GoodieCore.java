@@ -9,7 +9,10 @@ import com.goodie.sdk.android.data.builder.PromotionInquiryBasicBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryCustomByAmountBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryCustomIssuingBuilder;
+import com.goodie.sdk.android.data.builder.PromotionPostingBasicBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingBuilder;
+import com.goodie.sdk.android.data.builder.PromotionPostingCustomByAmountBuilder;
+import com.goodie.sdk.android.data.builder.PromotionPostingCustomIssuingBuilder;
 import com.goodie.sdk.android.data.builder.RegisterBuilder;
 import com.goodie.sdk.android.data.builder.VerificationBuilder;
 import java.util.List;
@@ -110,6 +113,32 @@ public class GoodieCore{
                                                                                             int amount, String ref){
         return new PromotionInquiryCustomByAmountBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, ruleName, issuing, amount, ref);
     }
+
+
+
+    //promotion posting basic
+    public static PromotionPostingBasicBuilder setPromotionPostBasicBuilder(String authToken, String deviceUniqId, String memberId, String merchantId,
+                                                                           String storeId, String productCode, String refNumber,
+                                                                           Double totalTrxAmount){
+        return new PromotionPostingBasicBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, productCode, refNumber, totalTrxAmount);
+    }
+
+
+    //promotion posting custom issuing
+    public static PromotionPostingCustomIssuingBuilder setPromotionPostCustomIssuingBuilder(String authToken, String deviceUniqId, String memberId, String merchantId,
+                                                                                           String storeId, String ruleName, int issuing,
+                                                                                           int amount, String ref){
+        return new PromotionPostingCustomIssuingBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, ruleName, issuing, amount, ref);
+    }
+
+
+    //promotion posting custom by Amount
+    public static PromotionPostingCustomByAmountBuilder setPromotionPostCustomByAmountBuilder(String authToken, String deviceUniqId, String memberId, String merchantId,
+                                                                                                                   String storeId, String ruleName, int issuing,
+                                                                                                                   int amount, String ref){
+        return new PromotionPostingCustomByAmountBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, ruleName, issuing, amount, ref);
+    }
+
 
 
     /**

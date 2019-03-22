@@ -4,6 +4,8 @@ import com.goodie.sdk.android.data.bean.CustomRulesReq;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 /**
  * Created by Goodie on 21/02/2019.
  */
@@ -21,7 +23,7 @@ public class PromoInqCustomByAmountRequest {
 
     @SerializedName("custom")
     @Expose
-    private CustomRulesReq customRulesReq;
+    private List<CustomRulesReq> customRulesReq;
 
     public String getMemberId() {
         return memberId;
@@ -47,11 +49,12 @@ public class PromoInqCustomByAmountRequest {
         this.storeId = storeId;
     }
 
-    public CustomRulesReq getCustomRulesReq() {
+
+    public List<CustomRulesReq> getCustomRulesReq() {
         return customRulesReq;
     }
 
-    public void setCustomRulesReq(CustomRulesReq customRulesReq) {
+    public void setCustomRulesReq(List<CustomRulesReq> customRulesReq) {
         this.customRulesReq = customRulesReq;
     }
 }

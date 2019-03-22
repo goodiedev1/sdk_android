@@ -13,7 +13,6 @@ import com.goodie.sdk.android.data.request.PromotionPostingRequest;
 import com.goodie.sdk.android.data.request.RegisterRequest;
 import com.goodie.sdk.android.data.request.VerificationRequest;
 import com.google.gson.annotations.SerializedName;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,8 +25,7 @@ public class GoodieModel {
     //get deviceid
     public static String getDeviceId(Context context){
         String result = "";
-        //result = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-        result = "tokenttokenan";
+        result = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
         return result;
     }
 
@@ -132,11 +130,20 @@ public class GoodieModel {
     //promotion inquiry custom issuing
     public static PromoInqCustomByAmountRequest setPromoInqCustomByAmountRequest(String memberId, String merchantId, String storeId,
                                                                                 String roleName, int issuing, int amount, String refNumber, Context context){
+
+        List<CustomRulesReq> customRulesReq = new ArrayList<>();
+        CustomRulesReq customRulesReq1 = new CustomRulesReq();
+        customRulesReq1.setRuleName(roleName);
+        customRulesReq1.setRefNumber(refNumber);
+        customRulesReq1.setIssuing(issuing);
+        customRulesReq1.setAmount(amount);
+        customRulesReq.add(customRulesReq1);
+
         PromoInqCustomByAmountRequest promoInqCustomByAmountRequest = new PromoInqCustomByAmountRequest();
         promoInqCustomByAmountRequest.setMemberId(memberId);
         promoInqCustomByAmountRequest.setMerchantId(merchantId);
         promoInqCustomByAmountRequest.setStoreId(storeId);
-        promoInqCustomByAmountRequest.setCustomRulesReq(getCustomRoles(roleName, issuing, amount, refNumber));
+        promoInqCustomByAmountRequest.setCustomRulesReq(customRulesReq);
         return  promoInqCustomByAmountRequest;
     }
 
