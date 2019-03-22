@@ -34,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="176" column="23" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
+              <caret line="176" column="66" selection-start-line="176" selection-start-column="66" selection-end-line="176" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -3420,7 +3420,7 @@
     <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="176" column="23" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
+          <caret line="176" column="66" selection-start-line="176" selection-start-column="66" selection-end-line="176" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -174,7 +174,7 @@ public enum GoodieApis {
         @POST("member/registration/verification")
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
 
-        @FormUrlEncoded
+        @Headers({"Content-Type: application/x-www-form-urlencoded"})
         @GET("member/points")
         Observable<MemberPointResponse> memberPoint(@Header("authToken")  String authToken,
                                                     @Header("deviceUniqueId")  String deviceUniqId,
