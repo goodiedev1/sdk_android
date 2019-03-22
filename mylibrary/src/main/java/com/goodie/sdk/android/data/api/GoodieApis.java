@@ -34,6 +34,7 @@ import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 import rx.Observable;
 
 /**
@@ -173,12 +174,12 @@ public enum GoodieApis {
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
 
 
-        @GET("member/points/{memberId}/{merchantId}")
+        @GET("member/points")
         Observable<MemberPointResponse> memberPoint(@Header("Content-Type") String contentType,
                                                     @Header("authToken")  String authToken,
                                                     @Header("deviceUniqueId")  String deviceUniqId,
-                                                    @Path("memberId") String memberId,
-                                                    @Path("merchantId") String merchantId
+                                                    @Query("memberId") String memberId,
+                                                    @Query("merchantId") String merchantId
         );
 
 
