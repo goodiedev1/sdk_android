@@ -14,6 +14,7 @@ import com.goodie.sdk.android.data.request.RegisterRequest;
 import com.goodie.sdk.android.data.request.VerificationRequest;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -111,11 +112,20 @@ public class GoodieModel {
     //promotion inquiry custom issuing
     public static PromoInqCustomIssuingRequest setPromoInqCustomIssuingRequest(String memberId, String merchantId, String storeId,
                                                                        String roleName, int issuing, int amount, String refNumber, Context context){
+
+        List<CustomRulesReq> customRulesReq = new ArrayList<>();
+        CustomRulesReq customRulesReq1 = new CustomRulesReq();
+        customRulesReq1.setRuleName(roleName);
+        customRulesReq1.setRefNumber(refNumber);
+        customRulesReq1.setIssuing(issuing);
+        customRulesReq1.setAmount(amount);
+        customRulesReq.add(customRulesReq1);
+
         PromoInqCustomIssuingRequest promoInqCustomIssuingRequest = new PromoInqCustomIssuingRequest();
         promoInqCustomIssuingRequest.setMemberId(memberId);
         promoInqCustomIssuingRequest.setMerchantId(merchantId);
         promoInqCustomIssuingRequest.setStoreId(storeId);
-        promoInqCustomIssuingRequest.setCustomRulesReq(getCustomRoles(roleName, issuing, amount, refNumber));
+        promoInqCustomIssuingRequest.setCustomRulesReq(customRulesReq);
         return  promoInqCustomIssuingRequest;
     }
 
