@@ -10,15 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96ada9d0-dcc3-4fe1-aec8-dc0752bd2e69" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java" beforeDir="false" afterPath="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingBuilder.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GoodieApis.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GoodieApis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="233">
+              <caret line="183" lean-forward="true" selection-start-line="183" selection-end-line="183" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2415#2416#0" expanded="true" />
@@ -55,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromotionPostingBuilder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PromotionPostingBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="173">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -67,57 +59,18 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylibrary/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoodieBaseActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/ui/activities/GoodieBaseActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemberPointBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/MemberPointBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PromotionInquiryCustomByAmountBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionInquiryCustomByAmountBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-            </state>
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PromotionPostingCustomByAmountBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomByAmountBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoodieCore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/GoodieCore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -3005,8 +2958,8 @@
         <option value="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomByAmountBuilder.java" />
         <option value="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/GoodieCore.java" />
         <option value="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/Goodie.java" />
-        <option value="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java" />
         <option value="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingBuilder.java" />
+        <option value="$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java" />
       </list>
     </option>
   </component>
@@ -3033,49 +2986,6 @@
               <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
               <item name="mylibrary" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="mylibrary" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="mylibrary" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="mylibrary" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="mylibrary" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="builder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="mylibrary" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="activities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="mylibrary" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdk_android" type="1abcf292:AndroidViewProjectNode" />
@@ -3231,7 +3141,7 @@
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Flutter Outline" order="3" />
-      <window_info anchor="bottom" id="Logcat" order="7" visible="true" weight="0.33910534" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="7" visible="true" weight="0.33910534" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32900432" />
@@ -3247,7 +3157,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Captures" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553648" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553648" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -3426,30 +3336,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomIssuingBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionInquiryCustomByAmountBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomByAmountBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3494,27 +3384,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomIssuingBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/RegisterBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/VerificationBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomByAmountBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mylibrary/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289" />
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="233">
+          <caret line="183" lean-forward="true" selection-start-line="183" selection-end-line="183" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2415#2416#0" expanded="true" />
             <element signature="e#2446#2447#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>

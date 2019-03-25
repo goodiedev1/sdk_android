@@ -172,7 +172,7 @@ public enum GoodieApis {
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
 
 
-        @Headers({"Content-Type: application/json"})
+        @Headers({"content-type: application/x-www-form-urlencoded;charset=UTF-8", })
         @GET("member/points")
         Observable<MemberPointResponse> memberPoint(@Header("Content-Type") String contentType,
                                                     @Header("authToken")  String authToken,
