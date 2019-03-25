@@ -100,7 +100,7 @@ public enum GoodieApis {
     }
 
     public Observable<MemberPointResponse> doMemberPoint(String authToken, String deviceUniqId, String memberId, String merchantId, Context context) {
-        return api.memberPoint( "application/x-www-form-urlencoded", authToken, deviceUniqId, memberId, merchantId);
+        return api.memberPoint(authToken, deviceUniqId, memberId, merchantId);
     }
 
 
@@ -174,7 +174,7 @@ public enum GoodieApis {
 
         @Headers({"content-type: application/x-www-form-urlencoded;charset=UTF-8", })
         @GET("member/points")
-        Observable<MemberPointResponse> memberPoint(@Header("Content-Type") String contentType,
+        Observable<MemberPointResponse> memberPoint(
                                                     @Header("authToken")  String authToken,
                                                     @Header("deviceUniqueId")  String deviceUniqId,
                                                     @Query("memberId") String memberId,
