@@ -105,8 +105,6 @@ public enum GoodieApis {
 
 
     //promotion inquiry
-
-
     public Observable<PromotionInquiryResponse> doPromotionInquiry(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
                                                                    BasicRulesReq basicRulesReq, List<CustomRulesReq> customRulesReq, Context context) {
         return api.promotionInquiry(authToken, deviceUniqId, GoodieModel.setPromotionInquiryRequest(memberId, merchantId, storeId, basicRulesReq, customRulesReq, context));
@@ -135,7 +133,6 @@ public enum GoodieApis {
     }
 
     //promotion posting
-
     public Observable<PromoInqBasicResponse> doPromoPostingBasic(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
                                                                  String productCode, String refNumber, Double totalTrxAmount, Context context) {
         return api.promoPostingBasic(authToken, deviceUniqId, GoodieModel.setPromoInqBasicRequest(memberId, merchantId, storeId,
@@ -175,6 +172,7 @@ public enum GoodieApis {
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
 
 
+        @Headers({"Content-Type: application/json"})
         @GET("member/points")
         Observable<MemberPointResponse> memberPoint(@Header("Content-Type") String contentType,
                                                     @Header("authToken")  String authToken,

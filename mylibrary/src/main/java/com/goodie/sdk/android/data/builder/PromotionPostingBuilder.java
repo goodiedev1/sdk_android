@@ -29,7 +29,8 @@ public class PromotionPostingBuilder {
 
     public PromotionPostingBuilder(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
                                    BasicRulesReq basicRulesReqs, List<CustomRulesReq> customRulesReqs){
-        this.authToken = deviceUniqId;
+        this.deviceUniqId = deviceUniqId;
+        this.authToken = authToken;
         this.memberId = memberId;
         this.merchantId = merchantId;
         this.storeId = storeId;
