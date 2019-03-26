@@ -36,8 +36,8 @@
       <file leaf-file-name="GoodieApis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="180" column="47" selection-start-line="180" selection-start-column="47" selection-end-line="180" selection-end-column="47" />
+            <state relative-caret-position="276">
+              <caret line="205" column="49" selection-start-line="205" selection-start-column="49" selection-end-line="205" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2612#2613#0" expanded="true" />
@@ -3765,8 +3765,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="180" column="47" selection-start-line="180" selection-start-column="47" selection-end-line="180" selection-end-column="47" />
+        <state relative-caret-position="276">
+          <caret line="205" column="49" selection-start-line="205" selection-start-column="49" selection-end-line="205" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2612#2613#0" expanded="true" />

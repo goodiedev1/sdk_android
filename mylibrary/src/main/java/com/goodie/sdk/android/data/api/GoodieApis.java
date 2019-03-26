@@ -178,7 +178,6 @@ public enum GoodieApis {
     public interface Apis {
 
 
-        @Headers("Content-Type:application/json")
         @POST("authentication/create")
         Observable<LoginResponse> login(@Body LoginRequest request);
 
@@ -204,6 +203,7 @@ public enum GoodieApis {
                                                               @Header("deviceUniqueId")  String deviceUniqId,
                                                               @Body PromotionInquiryRequest request);
 
+        @Headers("Content-Type:application/json")
         @POST("promotion/inquiry")
         Observable<PromoInqBasicResponse> promoInquiryBasic(@Header("authToken")  String authToken,
                                                             @Header("deviceUniqueId")  String deviceUniqId,
