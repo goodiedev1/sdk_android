@@ -31,7 +31,7 @@ public class VerificationBuilder {
     }
 
     public Observable<VerificationResponse> verificationObserv(String username, String merchantId, String verificationCode, Context context){
-        return GoodieApis.getInstance().doVerifation(username, merchantId, verificationCode, context);
+        return GoodieApis.getInstance().doVerifation(username, verificationCode, merchantId, context);
     }
 
 

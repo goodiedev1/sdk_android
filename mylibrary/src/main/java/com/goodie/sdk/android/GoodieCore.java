@@ -3,6 +3,7 @@ import android.app.Application;
 import android.support.annotation.RestrictTo;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
+import com.goodie.sdk.android.data.bean.RewardsReq;
 import com.goodie.sdk.android.data.builder.LoginBuilder;
 import com.goodie.sdk.android.data.builder.MemberPointBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryBasicBuilder;
@@ -14,7 +15,10 @@ import com.goodie.sdk.android.data.builder.PromotionPostingBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomByAmountBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomIssuingBuilder;
 import com.goodie.sdk.android.data.builder.RegisterBuilder;
+import com.goodie.sdk.android.data.builder.RewardRedeemptionBuilder;
 import com.goodie.sdk.android.data.builder.VerificationBuilder;
+import com.goodie.sdk.android.data.builder.VoucherUsageBuilder;
+
 import java.util.List;
 
 /**
@@ -137,6 +141,20 @@ public class GoodieCore{
                                                                                                                    String storeId, String ruleName, int issuing,
                                                                                                                    int amount, String ref){
         return new PromotionPostingCustomByAmountBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, ruleName, issuing, amount, ref);
+    }
+
+
+    //voucher usage
+    public static VoucherUsageBuilder setVoucherUsageBuilder(String authToken, String deviceUniqId, String memberId, String merchantId,
+                                                                                              String storeId, String voucherBalanceId){
+        return new VoucherUsageBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, voucherBalanceId);
+    }
+
+
+
+    public static RewardRedeemptionBuilder setRewardRedeemptionBuilder(String authToken, String deviceUniqId, String memberId, String merchantId,
+                                                                       List<RewardsReq> rewardsReqs){
+        return new RewardRedeemptionBuilder(authToken, deviceUniqId, memberId, merchantId, rewardsReqs);
     }
 
 

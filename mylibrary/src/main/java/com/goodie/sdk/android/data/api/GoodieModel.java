@@ -3,6 +3,7 @@ import android.content.Context;
 import android.provider.Settings;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
+import com.goodie.sdk.android.data.bean.RewardsReq;
 import com.goodie.sdk.android.data.request.LoginRequest;
 import com.goodie.sdk.android.data.request.MemberPointRequest;
 import com.goodie.sdk.android.data.request.PromoInqBasicRequest;
@@ -11,7 +12,9 @@ import com.goodie.sdk.android.data.request.PromoInqCustomIssuingRequest;
 import com.goodie.sdk.android.data.request.PromotionInquiryRequest;
 import com.goodie.sdk.android.data.request.PromotionPostingRequest;
 import com.goodie.sdk.android.data.request.RegisterRequest;
+import com.goodie.sdk.android.data.request.RewardRedeemRequest;
 import com.goodie.sdk.android.data.request.VerificationRequest;
+import com.goodie.sdk.android.data.request.VoucherUsageRequest;
 import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
@@ -175,6 +178,34 @@ public class GoodieModel {
         promotionPostingRequest.setBasicRulesReq(basicRulesReq);
         promotionPostingRequest.setCustomRulesReqs(customRulesReq);
         return  promotionPostingRequest;
+    }
+
+
+
+    //voucher usage model
+    public static VoucherUsageRequest setVoucherUsageRequest(String memberId, String merchantId, String storeId,
+                                                                 String voucherBalanceId,
+                                                                 Context context){
+        VoucherUsageRequest voucherUsageRequest = new VoucherUsageRequest();
+        voucherUsageRequest.setMemberId(memberId);
+        voucherUsageRequest.setMerchantId(merchantId);
+        voucherUsageRequest.setStoreId(storeId);
+        voucherUsageRequest.setVoucherBalanceId(voucherBalanceId);
+        return  voucherUsageRequest;
+    }
+
+
+
+
+    //reward redeem model
+    public static RewardRedeemRequest setRewardRedeemRequest(String memberId, String merchantId,
+                                                                 List<RewardsReq> rewardsReqs,
+                                                                 Context context){
+        RewardRedeemRequest rewardRedeemRequest = new RewardRedeemRequest();
+        rewardRedeemRequest.setMemberId(memberId);
+        rewardRedeemRequest.setMerchantId(merchantId);
+        rewardRedeemRequest.setRewards(rewardsReqs);
+        return  rewardRedeemRequest;
     }
 
 

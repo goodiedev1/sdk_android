@@ -2,6 +2,7 @@ package com.goodie.sdk.android.data.api;
 import android.content.Context;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
+import com.goodie.sdk.android.data.bean.RewardsReq;
 import com.goodie.sdk.android.data.request.LoginRequest;
 import com.goodie.sdk.android.data.request.PromoInqBasicRequest;
 import com.goodie.sdk.android.data.request.PromoInqCustomByAmountRequest;
@@ -9,14 +10,18 @@ import com.goodie.sdk.android.data.request.PromoInqCustomIssuingRequest;
 import com.goodie.sdk.android.data.request.PromotionInquiryRequest;
 import com.goodie.sdk.android.data.request.PromotionPostingRequest;
 import com.goodie.sdk.android.data.request.RegisterRequest;
+import com.goodie.sdk.android.data.request.RewardRedeemRequest;
 import com.goodie.sdk.android.data.request.VerificationRequest;
+import com.goodie.sdk.android.data.request.VoucherUsageRequest;
 import com.goodie.sdk.android.data.response.LoginResponse;
 import com.goodie.sdk.android.data.response.MemberPointResponse;
 import com.goodie.sdk.android.data.response.PromoInqBasicResponse;
 import com.goodie.sdk.android.data.response.PromotionInquiryResponse;
 import com.goodie.sdk.android.data.response.PromotionPostingResponse;
 import com.goodie.sdk.android.data.response.RegisterResponse;
+import com.goodie.sdk.android.data.response.RewardRedemptionResponse;
 import com.goodie.sdk.android.data.response.VerificationResponse;
+import com.goodie.sdk.android.data.response.VoucherUsageResponse;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -29,12 +34,10 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 import rx.Observable;
 
@@ -158,6 +161,19 @@ public enum GoodieApis {
     }
 
 
+
+    public Observable<VoucherUsageResponse> doVoucherUsage(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
+                                                                   String voucherBalanceId, Context context){
+        return api.voucherUsage(authToken, deviceUniqId, GoodieModel.setVoucherUsageRequest(memberId, merchantId, storeId, voucherBalanceId, context));
+    }
+
+
+    public Observable<RewardRedemptionResponse> doRewardRedemtion(String authToken, String deviceUniqId, String memberId, String merchantId, List<RewardsReq> rewardsReqList, Context context) {
+        return api.rewardReedem(authToken, deviceUniqId, GoodieModel.setRewardRedeemRequest(memberId, merchantId, rewardsReqList, context));
+    }
+
+
+
     public interface Apis {
 
 
@@ -172,7 +188,7 @@ public enum GoodieApis {
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
 
 
-        @Headers({"content-type: application/x-www-form-urlencoded;charset=UTF-8", })
+        @Headers("Content-Type: application/x-www-form-urlencoded")
         @GET("member/points")
         Observable<MemberPointResponse> memberPoint(
                                                     @Header("authToken")  String authToken,
@@ -224,6 +240,18 @@ public enum GoodieApis {
         Observable<PromotionPostingResponse> promotionPosting(@Header("authToken")  String authToken,
                                                               @Header("deviceUniqueId")  String deviceUniqId,
                                                               @Body PromotionPostingRequest request);
+
+        @POST("point-transaction/redemption/voucher/redeem")
+        Observable<VoucherUsageResponse> voucherUsage(@Header("authToken")  String authToken,
+                                                      @Header("deviceUniqueId")  String deviceUniqId,
+                                                      @Body VoucherUsageRequest request);
+
+
+        @POST("point-transaction/redemption/reward/redeem")
+        Observable<RewardRedemptionResponse> rewardReedem(@Header("authToken")  String authToken,
+                                                          @Header("deviceUniqueId")  String deviceUniqId,
+                                                          @Body RewardRedeemRequest request);
+
 
     }
 

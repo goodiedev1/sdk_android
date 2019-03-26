@@ -4,6 +4,7 @@ import android.support.annotation.RestrictTo;
 import com.goodie.sdk.android.Util.Constant;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
+import com.goodie.sdk.android.data.bean.RewardsReq;
 import com.goodie.sdk.android.data.builder.LoginBuilder;
 import com.goodie.sdk.android.data.builder.MemberPointBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryBasicBuilder;
@@ -15,7 +16,9 @@ import com.goodie.sdk.android.data.builder.PromotionPostingBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomByAmountBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomIssuingBuilder;
 import com.goodie.sdk.android.data.builder.RegisterBuilder;
+import com.goodie.sdk.android.data.builder.RewardRedeemptionBuilder;
 import com.goodie.sdk.android.data.builder.VerificationBuilder;
+import com.goodie.sdk.android.data.builder.VoucherUsageBuilder;
 import com.goodie.sdk.android.data.config.GoodieConfig;
 import java.util.List;
 
@@ -111,6 +114,20 @@ public class Goodie{
                                                               List<CustomRulesReq> customRulesReqs){
         return GoodieCore.setPromotionPostingBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, basicRulesReq, customRulesReqs);
     }
+
+
+    //voucher usage
+    public static VoucherUsageBuilder setVoucherUsage(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
+                                                          String voucherBalanceId){
+        return GoodieCore.setVoucherUsageBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, voucherBalanceId);
+    }
+
+
+    //redeem reward
+    public static RewardRedeemptionBuilder setRedeemReward(String authToken, String deviceUniqId, String memberId, String merchantId, List<RewardsReq> listReward){
+        return GoodieCore.setRewardRedeemptionBuilder(authToken, deviceUniqId, memberId, merchantId, listReward);
+    }
+
 
 
     @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
