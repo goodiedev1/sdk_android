@@ -189,7 +189,7 @@ public enum GoodieApis {
 
 
         @GET("member/points")
-        Observable<MemberPointResponse> memberPoint(@Header("Content-Type") String contentType,
+        Observable<MemberPointResponse> memberPoint(@Header("Content-Type:") String contentType,
                                                     @Header("authToken")  String authToken,
                                                     @Header("deviceUniqueId")  String deviceUniqId,
                                                     @Query("memberId") String memberId,
