@@ -74,6 +74,7 @@ public enum GoodieApis {
                     public Response intercept(Chain chain) throws IOException {
                         Request.Builder requestBuilder = chain.request().newBuilder();
                         requestBuilder.header("Content-Type", "application/json");
+                        requestBuilder.addHeader("Content-Type", "application/x-www-form-urlencoded");
                         return chain.proceed(requestBuilder.build());
                     }
                 }
@@ -103,7 +104,7 @@ public enum GoodieApis {
     }
 
     public Observable<MemberPointResponse> doMemberPoint(String authToken, String deviceUniqId, String memberId, String merchantId, Context context) {
-        return api.memberPoint("application/x-www-form-urlencoded", authToken, deviceUniqId, memberId, merchantId);
+        return api.memberPoint(authToken, deviceUniqId, memberId, merchantId);
     }
 
 
@@ -189,8 +190,7 @@ public enum GoodieApis {
 
 
         @GET("member/points")
-        Observable<MemberPointResponse> memberPoint(@Header("Content-Type:") String contentType,
-                                                    @Header("authToken")  String authToken,
+        Observable<MemberPointResponse> memberPoint(@Header("authToken")  String authToken,
                                                     @Header("deviceUniqueId")  String deviceUniqId,
                                                     @Query("memberId") String memberId,
                                                     @Query("merchantId") String merchantId
