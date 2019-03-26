@@ -36,8 +36,8 @@
       <file leaf-file-name="GoodieApis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="76" column="49" lean-forward="true" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+            <state relative-caret-position="264">
+              <caret line="191" column="64" selection-start-line="191" selection-start-column="64" selection-end-line="191" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2612#2613#0" expanded="true" />
@@ -124,18 +124,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoodieModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="201" column="76" selection-start-line="201" selection-start-column="76" selection-end-line="201" selection-end-column="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -3310,16 +3298,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomByAmountBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/builder/PromotionPostingCustomIssuingBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -3744,13 +3722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/Goodie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="127" column="41" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/GoodieCore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -3778,10 +3749,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/76f3c69879d3e01c082f49d8661c5590838148e1/retrofit-2.3.0-sources.jar!/retrofit2/Retrofit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="430" column="19" selection-start-line="430" selection-start-column="19" selection-end-line="430" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/Goodie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="127" column="41" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mylibrary/src/main/java/com/goodie/sdk/android/data/api/GoodieApis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="76" column="49" lean-forward="true" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+        <state relative-caret-position="264">
+          <caret line="191" column="64" selection-start-line="191" selection-start-column="64" selection-end-line="191" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2612#2613#0" expanded="true" />

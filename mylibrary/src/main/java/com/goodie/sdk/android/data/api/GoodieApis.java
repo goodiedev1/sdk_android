@@ -73,8 +73,8 @@ public enum GoodieApis {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
                         Request.Builder requestBuilder = chain.request().newBuilder();
-                        requestBuilder.header("Content-Type", "application/json");
-                        requestBuilder.addHeader("Content-Type", "application/x-www-form-urlencoded");
+                        //requestBuilder.header("Content-Type", "application/json");
+                        //requestBuilder.addHeader("Content-Type", "application/x-www-form-urlencoded");
                         return chain.proceed(requestBuilder.build());
                     }
                 }
@@ -189,6 +189,7 @@ public enum GoodieApis {
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
 
 
+        @Headers("Content-Type:application/x-www-form-urlencoded")
         @GET("member/points")
         Observable<MemberPointResponse> memberPoint(@Header("authToken")  String authToken,
                                                     @Header("deviceUniqueId")  String deviceUniqId,
