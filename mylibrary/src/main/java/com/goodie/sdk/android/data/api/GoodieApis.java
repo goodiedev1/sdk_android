@@ -178,6 +178,7 @@ public enum GoodieApis {
     public interface Apis {
 
 
+        @Headers("Content-Type:application/json")
         @POST("authentication/create")
         Observable<LoginResponse> login(@Body LoginRequest request);
 
