@@ -151,7 +151,7 @@ public class Goodie{
     public static VoucherBalanceBuilder setVoucherBalance(String authToken, String deviceUniqId, String voucherbalanceId, String memberId, String merchantId, int orderBy, int orderType, int nRecords, int page){
         return GoodieCore.setVoucherBalanceBuilder(authToken, deviceUniqId, voucherbalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
     }
-    
+
     @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
     public static void initWithCustomServer(Application application, String qiscusAppId, String serverBaseUrl){
         GoodieCore.initWithCustomServer(application, qiscusAppId, serverBaseUrl);

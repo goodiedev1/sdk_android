@@ -154,7 +154,7 @@ public class GoodieCore{
     }
 
 
-
+    //reward redeem
     public static RewardRedeemptionBuilder setRewardRedeemptionBuilder(String authToken, String deviceUniqId, String memberId, String merchantId,
                                                                        List<RewardsReq> rewardsReqs){
         return new RewardRedeemptionBuilder(authToken, deviceUniqId, memberId, merchantId, rewardsReqs);

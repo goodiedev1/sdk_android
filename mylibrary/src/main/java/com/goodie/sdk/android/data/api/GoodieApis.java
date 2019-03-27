@@ -296,7 +296,6 @@ public enum GoodieApis {
         );
 
 
-
         @Headers("Content-Type:application/x-www-form-urlencoded")
         @GET("member/points")
         Observable<MemberProfileResponse> memberProfile(@Header("authToken")  String authToken,
@@ -306,7 +305,7 @@ public enum GoodieApis {
         );
 
 
-
+        //voucher balance masih progress
         @Headers("Content-Type:application/x-www-form-urlencoded")
         @GET("point-transaction/redemption/voucher")
         Observable<VoucherBalanceResponse> voucherBalance(@Header("authToken")  String authToken,
