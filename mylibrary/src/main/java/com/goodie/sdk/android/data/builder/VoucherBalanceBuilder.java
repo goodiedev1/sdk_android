@@ -33,7 +33,7 @@ public class VoucherBalanceBuilder {
         this.page = page;
     }
 
-    public void memberPointGoodie(Context context, SetVoucherBalanceListener listener){
+    public void voucherBalanceGoodie(Context context, SetVoucherBalanceListener listener){
         voucherBalanceObserv(authToken, deviceUniqId, voucherBalanceId, memberId,  merchantId, orderBy, orderType, nRecords, page, context)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
