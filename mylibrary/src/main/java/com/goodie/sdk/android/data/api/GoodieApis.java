@@ -15,12 +15,15 @@ import com.goodie.sdk.android.data.request.VerificationRequest;
 import com.goodie.sdk.android.data.request.VoucherUsageRequest;
 import com.goodie.sdk.android.data.response.LoginResponse;
 import com.goodie.sdk.android.data.response.MemberPointResponse;
+import com.goodie.sdk.android.data.response.MemberProfileResponse;
 import com.goodie.sdk.android.data.response.PromoInqBasicResponse;
 import com.goodie.sdk.android.data.response.PromotionInquiryResponse;
 import com.goodie.sdk.android.data.response.PromotionPostingResponse;
 import com.goodie.sdk.android.data.response.RegisterResponse;
+import com.goodie.sdk.android.data.response.RewardListResponse;
 import com.goodie.sdk.android.data.response.RewardRedemptionResponse;
 import com.goodie.sdk.android.data.response.VerificationResponse;
+import com.goodie.sdk.android.data.response.VoucherBalanceResponse;
 import com.goodie.sdk.android.data.response.VoucherUsageResponse;
 import java.io.IOException;
 import java.util.List;
@@ -74,7 +77,6 @@ public enum GoodieApis {
                     public Response intercept(Chain chain) throws IOException {
                         Request.Builder requestBuilder = chain.request().newBuilder();
                         //requestBuilder.header("Content-Type", "application/json");
-                        //requestBuilder.addHeader("Content-Type", "application/x-www-form-urlencoded");
                         return chain.proceed(requestBuilder.build());
                     }
                 }
@@ -174,6 +176,25 @@ public enum GoodieApis {
     }
 
 
+    public Observable<RewardListResponse> doRewardList(String authToken, String deviceUniqId, String keyword, String rewardId,
+                                                       String memberId, String merchantId, int orderBy, int orderType, int nRecords,
+                                                       int page, Context context) {
+        return api.rewardList(authToken, deviceUniqId, keyword, rewardId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
+
+
+    public Observable<MemberProfileResponse> doMemberProfile(String authToken, String deviceUniqId, String memberId, String merchantId, Context context) {
+        return api.memberProfile(authToken, deviceUniqId, memberId, merchantId);
+    }
+
+
+    public Observable<VoucherBalanceResponse> doVoucherBalance(String authToken, String deviceUniqId, String voucherBalanceId,
+                                                       String memberId, String merchantId, int orderBy, int orderType, int nRecords,
+                                                       int page, Context context) {
+        return api.voucherBalance(authToken, deviceUniqId, voucherBalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
+
+
 
     public interface Apis {
 
@@ -187,15 +208,6 @@ public enum GoodieApis {
 
         @POST("member/registration/verification")
         Observable<VerificationResponse> verification(@Body VerificationRequest request);
-
-
-        @Headers("Content-Type:application/x-www-form-urlencoded")
-        @GET("member/points")
-        Observable<MemberPointResponse> memberPoint(@Header("authToken")  String authToken,
-                                                    @Header("deviceUniqueId")  String deviceUniqId,
-                                                    @Query("memberId") String memberId,
-                                                    @Query("merchantId") String merchantId
-        );
 
 
         @Headers("Content-Type:application/json")
@@ -257,6 +269,57 @@ public enum GoodieApis {
         Observable<RewardRedemptionResponse> rewardReedem(@Header("authToken")  String authToken,
                                                           @Header("deviceUniqueId")  String deviceUniqId,
                                                           @Body RewardRedeemRequest request);
+
+
+
+        @Headers("Content-Type:application/x-www-form-urlencoded")
+        @GET("member/points")
+        Observable<MemberPointResponse> memberPoint(@Header("authToken")  String authToken,
+                                                    @Header("deviceUniqueId")  String deviceUniqId,
+                                                    @Query("memberId") String memberId,
+                                                    @Query("merchantId") String merchantId
+        );
+
+        @Headers("Content-Type:application/x-www-form-urlencoded")
+        @GET("point-transaction/redemption/reward")
+        Observable<RewardListResponse> rewardList(@Header("authToken")  String authToken,
+                                                  @Header("deviceUniqueId")  String deviceUniqId,
+                                                  @Query("keyword") String keyword,
+                                                  @Query("rewardId") String rewardId,
+                                                  @Query("memberId") String memberId,
+                                                  @Query("merchantId") String merchantId,
+                                                  @Query("orderBy") Integer orderBy,
+                                                  @Query("orderType") Integer orderType,
+                                                  @Query("nRecords") Integer nRecords,
+                                                  @Query("page") Integer page
+
+        );
+
+
+
+        @Headers("Content-Type:application/x-www-form-urlencoded")
+        @GET("member/points")
+        Observable<MemberProfileResponse> memberProfile(@Header("authToken")  String authToken,
+                                                        @Header("deviceUniqueId")  String deviceUniqId,
+                                                        @Query("memberId") String memberId,
+                                                        @Query("merchantId") String merchantId
+        );
+
+
+
+        @Headers("Content-Type:application/x-www-form-urlencoded")
+        @GET("point-transaction/redemption/voucher")
+        Observable<VoucherBalanceResponse> voucherBalance(@Header("authToken")  String authToken,
+                                                          @Header("deviceUniqueId")  String deviceUniqId,
+                                                          @Query("voucherBalanceId") String rewardId,
+                                                          @Query("memberId") String memberId,
+                                                          @Query("merchantId") String merchantId,
+                                                          @Query("orderBy") Integer orderBy,
+                                                          @Query("orderType") Integer orderType,
+                                                          @Query("nRecords") Integer nRecords,
+                                                          @Query("page") Integer page
+        );
+
 
 
     }

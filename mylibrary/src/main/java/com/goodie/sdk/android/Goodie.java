@@ -7,6 +7,7 @@ import com.goodie.sdk.android.data.bean.CustomRulesReq;
 import com.goodie.sdk.android.data.bean.RewardsReq;
 import com.goodie.sdk.android.data.builder.LoginBuilder;
 import com.goodie.sdk.android.data.builder.MemberPointBuilder;
+import com.goodie.sdk.android.data.builder.MemberProfileBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryBasicBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryCustomByAmountBuilder;
@@ -16,10 +17,14 @@ import com.goodie.sdk.android.data.builder.PromotionPostingBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomByAmountBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomIssuingBuilder;
 import com.goodie.sdk.android.data.builder.RegisterBuilder;
+import com.goodie.sdk.android.data.builder.RewardListBuilder;
 import com.goodie.sdk.android.data.builder.RewardRedeemptionBuilder;
 import com.goodie.sdk.android.data.builder.VerificationBuilder;
+import com.goodie.sdk.android.data.builder.VoucherBalanceBuilder;
 import com.goodie.sdk.android.data.builder.VoucherUsageBuilder;
 import com.goodie.sdk.android.data.config.GoodieConfig;
+import com.goodie.sdk.android.data.response.VoucherBalanceResponse;
+
 import java.util.List;
 
 /**
@@ -129,7 +134,24 @@ public class Goodie{
     }
 
 
+    //redeem reward
+    public static RewardListBuilder setRewardList(String authToken, String deviceUniqId, String keyword, String rewardId,
+                                                  String memberId, String merchantId, int orderBy, int orderType, int nRecords, int page){
+        return GoodieCore.setRewardListBuilder(authToken, deviceUniqId, keyword, rewardId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
 
+
+    //memberprofile goodie
+    public static MemberProfileBuilder setMemberProfile(String authToken, String deviceUniqId, String memberId, String merchantId){
+        return GoodieCore.setMemberProfileBuilder(authToken, deviceUniqId, memberId, merchantId);
+    }
+
+
+    //voucher balance
+    public static VoucherBalanceBuilder setVoucherBalance(String authToken, String deviceUniqId, String voucherbalanceId, String memberId, String merchantId, int orderBy, int orderType, int nRecords, int page){
+        return GoodieCore.setVoucherBalanceBuilder(authToken, deviceUniqId, voucherbalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
+    
     @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
     public static void initWithCustomServer(Application application, String qiscusAppId, String serverBaseUrl){
         GoodieCore.initWithCustomServer(application, qiscusAppId, serverBaseUrl);

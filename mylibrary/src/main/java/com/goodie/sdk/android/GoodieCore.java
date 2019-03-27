@@ -6,6 +6,7 @@ import com.goodie.sdk.android.data.bean.CustomRulesReq;
 import com.goodie.sdk.android.data.bean.RewardsReq;
 import com.goodie.sdk.android.data.builder.LoginBuilder;
 import com.goodie.sdk.android.data.builder.MemberPointBuilder;
+import com.goodie.sdk.android.data.builder.MemberProfileBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryBasicBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryBuilder;
 import com.goodie.sdk.android.data.builder.PromotionInquiryCustomByAmountBuilder;
@@ -15,8 +16,10 @@ import com.goodie.sdk.android.data.builder.PromotionPostingBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomByAmountBuilder;
 import com.goodie.sdk.android.data.builder.PromotionPostingCustomIssuingBuilder;
 import com.goodie.sdk.android.data.builder.RegisterBuilder;
+import com.goodie.sdk.android.data.builder.RewardListBuilder;
 import com.goodie.sdk.android.data.builder.RewardRedeemptionBuilder;
 import com.goodie.sdk.android.data.builder.VerificationBuilder;
+import com.goodie.sdk.android.data.builder.VoucherBalanceBuilder;
 import com.goodie.sdk.android.data.builder.VoucherUsageBuilder;
 
 import java.util.List;
@@ -157,6 +160,23 @@ public class GoodieCore{
         return new RewardRedeemptionBuilder(authToken, deviceUniqId, memberId, merchantId, rewardsReqs);
     }
 
+
+    //reward list
+    public static RewardListBuilder setRewardListBuilder(String authToken, String deviceUniqId, String keyword, String rewardId,
+                                                         String memberId, String merchantId, int orderBy, int orderType, int nRecords, int page){
+        return new RewardListBuilder(authToken, deviceUniqId, keyword, rewardId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
+
+    //member profile
+    public static MemberProfileBuilder setMemberProfileBuilder(String authToken, String deviceUniqId, String memberId, String merchantId){
+        return new MemberProfileBuilder(authToken, deviceUniqId, memberId, merchantId);
+    }
+
+    //voucher balance
+    public static VoucherBalanceBuilder setVoucherBalanceBuilder(String authToken, String deviceUniqId, String voucherBalanceId,
+                                                             String memberId, String merchantId, int orderBy, int orderType, int nRecords, int page){
+        return new VoucherBalanceBuilder(authToken, deviceUniqId, voucherBalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
 
 
     /**
