@@ -198,6 +198,7 @@ public enum GoodieApis {
         );
 
 
+        @Headers("Content-Type:application/json")
         @POST("promotion/inquiry")
         Observable<PromotionInquiryResponse> promotionInquiry(@Header("authToken")  String authToken,
                                                               @Header("deviceUniqueId")  String deviceUniqId,
@@ -209,45 +210,49 @@ public enum GoodieApis {
                                                             @Header("deviceUniqueId")  String deviceUniqId,
                                                             @Body PromoInqBasicRequest request);
 
+        @Headers("Content-Type:application/json")
         @POST("promotion/inquiry")
         Observable<PromoInqBasicResponse> promoInquiryCustomIssuing(@Header("authToken")  String authToken,
                                                                     @Header("deviceUniqueId")  String deviceUniqId,
                                                                     @Body PromoInqCustomIssuingRequest request);
 
+        @Headers("Content-Type:application/json")
         @POST("promotion/inquiry")
         Observable<PromoInqBasicResponse> promoInquiryCustomByAmount(@Header("authToken")  String authToken,
                                                                      @Header("deviceUniqueId")  String deviceUniqId,
                                                                      @Body PromoInqCustomByAmountRequest request);
 
-
+        @Headers("Content-Type:application/json")
         @POST("promotion/posting")
         Observable<PromoInqBasicResponse> promoPostingBasic(@Header("authToken")  String authToken,
                                                             @Header("deviceUniqueId")  String deviceUniqId,
                                                             @Body PromoInqBasicRequest request);
 
-
+        @Headers("Content-Type:application/json")
         @POST("promotion/posting")
         Observable<PromoInqBasicResponse> promoPostingCustomIssuing(@Header("authToken")  String authToken,
                                                                     @Header("deviceUniqueId")  String deviceUniqId,
                                                                     @Body PromoInqCustomIssuingRequest request);
 
-
+        @Headers("Content-Type:application/json")
         @POST("promotion/posting")
         Observable<PromoInqBasicResponse> promoPostingCustomByAmount(@Header("authToken")  String authToken,
                                                                      @Header("deviceUniqueId")  String deviceUniqId,
                                                                      @Body PromoInqCustomByAmountRequest request);
-
+        @Headers("Content-Type:application/json")
         @POST("promotion/posting")
         Observable<PromotionPostingResponse> promotionPosting(@Header("authToken")  String authToken,
                                                               @Header("deviceUniqueId")  String deviceUniqId,
                                                               @Body PromotionPostingRequest request);
 
+        @Headers("Content-Type:application/json")
         @POST("point-transaction/redemption/voucher/redeem")
         Observable<VoucherUsageResponse> voucherUsage(@Header("authToken")  String authToken,
                                                       @Header("deviceUniqueId")  String deviceUniqId,
                                                       @Body VoucherUsageRequest request);
 
 
+        @Headers("Content-Type:application/json")
         @POST("point-transaction/redemption/reward/redeem")
         Observable<RewardRedemptionResponse> rewardReedem(@Header("authToken")  String authToken,
                                                           @Header("deviceUniqueId")  String deviceUniqId,
