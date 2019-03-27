@@ -297,7 +297,7 @@ public enum GoodieApis {
 
 
         @Headers("Content-Type:application/x-www-form-urlencoded")
-        @GET("member/points")
+        @GET("member/profile")
         Observable<MemberProfileResponse> memberProfile(@Header("authToken")  String authToken,
                                                         @Header("deviceUniqueId")  String deviceUniqId,
                                                         @Query("memberId") String memberId,

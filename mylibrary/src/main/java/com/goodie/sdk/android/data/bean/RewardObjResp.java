@@ -1,8 +1,9 @@
 package com.goodie.sdk.android.data.bean;
 import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class RewardObjResp {
+public class RewardObjResp{
 
     @SerializedName("rewardId")
     private String rewardId;

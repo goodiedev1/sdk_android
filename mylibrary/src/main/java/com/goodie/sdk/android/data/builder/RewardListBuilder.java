@@ -36,7 +36,7 @@ public class RewardListBuilder {
        this.page = page;
     }
 
-    public void memberPointGoodie(Context context, SetRewardListListener listener){
+    public void rewardListGoodie(Context context, SetRewardListListener listener){
         rewardListObserv(authToken, deviceUniqId, keyword, rewardId, memberId,  merchantId, orderBy, orderType, nRecords, page, context)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
