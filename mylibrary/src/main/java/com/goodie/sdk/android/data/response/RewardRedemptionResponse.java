@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class RewardRedemptionResponse extends AbstractResponse {
+public class RewardRedemptionResponse extends GenericResponse {
 
 
     @SerializedName("rewardRedemptionResponse")
