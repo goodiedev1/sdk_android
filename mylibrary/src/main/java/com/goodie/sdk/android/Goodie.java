@@ -122,14 +122,14 @@ public class Goodie{
 
 
     //voucher usage
-    public static VoucherUsageBuilder setVoucherUsage(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
+    public static VoucherUsageBuilder setVoucherRedeem(String authToken, String deviceUniqId, String memberId, String merchantId, String storeId,
                                                           String voucherBalanceId){
         return GoodieCore.setVoucherUsageBuilder(authToken, deviceUniqId, memberId, merchantId, storeId, voucherBalanceId);
     }
 
 
     //redeem reward
-    public static RewardRedeemptionBuilder setRedeemReward(String authToken, String deviceUniqId, String memberId, String merchantId, List<RewardsReq> listReward){
+    public static RewardRedeemptionBuilder setRewardRedeem(String authToken, String deviceUniqId, String memberId, String merchantId, List<RewardsReq> listReward){
         return GoodieCore.setRewardRedeemptionBuilder(authToken, deviceUniqId, memberId, merchantId, listReward);
     }
 

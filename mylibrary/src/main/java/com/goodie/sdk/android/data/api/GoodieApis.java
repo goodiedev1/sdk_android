@@ -305,7 +305,6 @@ public enum GoodieApis {
         );
 
 
-        //voucher balance masih progress
         @Headers("Content-Type:application/x-www-form-urlencoded")
         @GET("point-transaction/redemption/voucher")
         Observable<VoucherBalanceResponse> voucherBalance(@Header("authToken")  String authToken,

@@ -29,7 +29,7 @@ public class VoucherUsageBuilder {
     }
 
 
-    public void voucherUsageGoodie(Context context, SetVoucherUsageListener listener){
+    public void voucherRedeemGoodie(Context context, SetVoucherUsageListener listener){
         voucherUsageObserv(authToken, deviceUniqId, memberId, merchantId, storeId, voucherBalanceId, context)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

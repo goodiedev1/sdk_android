@@ -1,11 +1,8 @@
 package com.goodie.sdk.android.data.response;
-
-import com.goodie.sdk.android.data.bean.PromotionNumberIssuedResp;
 import com.goodie.sdk.android.data.bean.RewardRedemptionResp;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
 
 public class RewardRedemptionResponse extends AbstractResponse {
 
