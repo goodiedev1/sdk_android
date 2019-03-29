@@ -2,7 +2,7 @@ package com.goodie.sdk.android.data.response;
 
 import com.google.gson.annotations.SerializedName;
 
-public class MemberProfileResponse extends AbstractResponse {
+public class MemberProfileResponse extends GenericResponse {
 
     @SerializedName("memberId")
     private String memberId;

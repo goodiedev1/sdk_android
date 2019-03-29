@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class RewardListResponse extends AbstractResponse{
+public class RewardListResponse extends GenericResponse{
 
     @SerializedName("rewards")
     @Expose
