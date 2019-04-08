@@ -8,7 +8,7 @@ import java.util.List;
 
 public class VoucherBalanceResponse extends GenericResponse{
 
-    @SerializedName("listVoucherbalance")
+    @SerializedName("listVoucherBalance")
     @Expose
     private List<VoucherBalanceResp> listVoucherbalance;
 
