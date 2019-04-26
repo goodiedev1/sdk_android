@@ -13,6 +13,7 @@ import com.goodie.sdk.android.data.request.RegisterRequest;
 import com.goodie.sdk.android.data.request.RewardRedeemRequest;
 import com.goodie.sdk.android.data.request.VerificationRequest;
 import com.goodie.sdk.android.data.request.VoucherUsageRequest;
+import com.goodie.sdk.android.data.response.ListPointTransactionResponse;
 import com.goodie.sdk.android.data.response.LoginResponse;
 import com.goodie.sdk.android.data.response.MemberPointResponse;
 import com.goodie.sdk.android.data.response.MemberProfileResponse;
@@ -194,6 +195,13 @@ public enum GoodieApis {
         return api.voucherBalance(authToken, deviceUniqId, voucherBalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
     }
 
+    public Observable<ListPointTransactionResponse> getListPointHistory(String authToken, String deviceUniqueId, String memberId, String merchantId,
+                                                                        int trxType, int orderBy, int orderType, int nRecords, int page, Context context) {
+
+        return api.listHistory(authToken, deviceUniqueId, memberId, merchantId, trxType, orderBy, orderType, nRecords, page);
+
+    }
+
 
 
     public interface Apis {
@@ -318,6 +326,19 @@ public enum GoodieApis {
                                                           @Query("page") Integer page
         );
 
+        // LIST HISTORY
+        @Headers("Content-Type:application/x-www-form-urlencoded")
+        @GET("point-transaction/history")
+        Observable<ListPointTransactionResponse> listHistory(@Header("authToken")  String authToken,
+                                                             @Header("deviceUniqueId")  String deviceUniqId,
+                                                             @Query("memberId") String memberId,
+                                                             @Query("merchantId") String merchantId,
+                                                             @Query("trxType") Integer trxType,
+                                                             @Query("orderBy") Integer orderBy,
+                                                             @Query("orderType") Integer orderType,
+                                                             @Query("nRecords") Integer nRecords,
+                                                             @Query("page") Integer page
+        );
 
 
     }
