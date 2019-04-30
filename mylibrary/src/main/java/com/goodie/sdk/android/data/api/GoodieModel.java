@@ -4,6 +4,7 @@ import android.provider.Settings;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
 import com.goodie.sdk.android.data.bean.RewardsReq;
+import com.goodie.sdk.android.data.request.ChangePasswordRequest;
 import com.goodie.sdk.android.data.request.LoginRequest;
 import com.goodie.sdk.android.data.request.MemberPointRequest;
 import com.goodie.sdk.android.data.request.PromoInqBasicRequest;
@@ -13,6 +14,7 @@ import com.goodie.sdk.android.data.request.PromotionInquiryRequest;
 import com.goodie.sdk.android.data.request.PromotionPostingRequest;
 import com.goodie.sdk.android.data.request.RegisterRequest;
 import com.goodie.sdk.android.data.request.RewardRedeemRequest;
+import com.goodie.sdk.android.data.request.UpdateMemberProfileRequest;
 import com.goodie.sdk.android.data.request.VerificationRequest;
 import com.goodie.sdk.android.data.request.VoucherUsageRequest;
 import com.google.gson.annotations.SerializedName;
@@ -206,6 +208,37 @@ public class GoodieModel {
         rewardRedeemRequest.setMerchantId(merchantId);
         rewardRedeemRequest.setRewards(rewardsReqs);
         return  rewardRedeemRequest;
+    }
+
+    // UPDATE MEMBER PROFILE
+    public static UpdateMemberProfileRequest setUpdateMemberProfileRequest(String memberId, String merchantId,
+                                                                           String birthDate, String firstName, String lastName,
+                                                                           String gender, String phoneNumber, Context context) {
+        UpdateMemberProfileRequest updateMemberProfileRequest = new UpdateMemberProfileRequest();
+        updateMemberProfileRequest.setBirthDate(birthDate);
+        updateMemberProfileRequest.setFirstName(firstName);
+        updateMemberProfileRequest.setGender(gender);
+        updateMemberProfileRequest.setLastName(lastName);
+        updateMemberProfileRequest.setPhoneNumber(phoneNumber);
+        updateMemberProfileRequest.setMemberId(memberId);
+        updateMemberProfileRequest.setMerchantId(merchantId);
+
+        return updateMemberProfileRequest;
+    }
+
+    // CHANGE PASSWORD MEMBER
+    public static ChangePasswordRequest setChangePassword(String memberId, String merchantId, String password,
+                                                          String confirmPassword, String passwordOld, String username, Context context) {
+
+        ChangePasswordRequest changePasswordRequest = new ChangePasswordRequest();
+        changePasswordRequest.setConfirmPassword(confirmPassword);
+        changePasswordRequest.setMemberId(memberId);
+        changePasswordRequest.setMerchantId(merchantId);
+        changePasswordRequest.setPassword(password);
+        changePasswordRequest.setPasswordOld(passwordOld);
+        changePasswordRequest.setUsername(username);
+
+        return changePasswordRequest;
     }
 
 

@@ -3,6 +3,7 @@ import android.content.Context;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
 import com.goodie.sdk.android.data.bean.RewardsReq;
+import com.goodie.sdk.android.data.request.ChangePasswordRequest;
 import com.goodie.sdk.android.data.request.LoginRequest;
 import com.goodie.sdk.android.data.request.PromoInqBasicRequest;
 import com.goodie.sdk.android.data.request.PromoInqCustomByAmountRequest;
@@ -11,8 +12,10 @@ import com.goodie.sdk.android.data.request.PromotionInquiryRequest;
 import com.goodie.sdk.android.data.request.PromotionPostingRequest;
 import com.goodie.sdk.android.data.request.RegisterRequest;
 import com.goodie.sdk.android.data.request.RewardRedeemRequest;
+import com.goodie.sdk.android.data.request.UpdateMemberProfileRequest;
 import com.goodie.sdk.android.data.request.VerificationRequest;
 import com.goodie.sdk.android.data.request.VoucherUsageRequest;
+import com.goodie.sdk.android.data.response.ChangePasswordResponse;
 import com.goodie.sdk.android.data.response.ListPointTransactionResponse;
 import com.goodie.sdk.android.data.response.LoginResponse;
 import com.goodie.sdk.android.data.response.MemberPointResponse;
@@ -23,6 +26,7 @@ import com.goodie.sdk.android.data.response.PromotionPostingResponse;
 import com.goodie.sdk.android.data.response.RegisterResponse;
 import com.goodie.sdk.android.data.response.RewardListResponse;
 import com.goodie.sdk.android.data.response.RewardRedemptionResponse;
+import com.goodie.sdk.android.data.response.UpdateMemberProfileResponse;
 import com.goodie.sdk.android.data.response.VerificationResponse;
 import com.goodie.sdk.android.data.response.VoucherBalanceResponse;
 import com.goodie.sdk.android.data.response.VoucherUsageResponse;
@@ -195,11 +199,30 @@ public enum GoodieApis {
         return api.voucherBalance(authToken, deviceUniqId, voucherBalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
     }
 
+
+    // POINT TRANSACTION HISTORY
     public Observable<ListPointTransactionResponse> getListPointHistory(String authToken, String deviceUniqueId, String memberId, String merchantId,
                                                                         int trxType, int orderBy, int orderType, int nRecords, int page, Context context) {
 
         return api.listHistory(authToken, deviceUniqueId, memberId, merchantId, trxType, orderBy, orderType, nRecords, page);
 
+    }
+
+
+    // UPDATE MEMBER PROFILE
+    public Observable<UpdateMemberProfileResponse> doUpdateMemberProfile(String authToken, String deviceUniqueId, String memberId, String merchantId,
+                                                                         String birthDate, String firstName, String lastName, String gender, String phoneNumber, Context context) {
+
+        return api.updateProfile(authToken, deviceUniqueId, GoodieModel.setUpdateMemberProfileRequest(memberId, merchantId, birthDate,
+                                                                                                    firstName, lastName, gender, phoneNumber, context));
+    }
+
+    // CHANGE PASSWORD MEMBER
+    public Observable<ChangePasswordResponse> doChangePassword(String authToken, String deviceUniqueId, String memberId, String merchantId, String password,
+                                                               String confirmPassword, String passwordOld, String username, Context context) {
+
+        return api.changePassword(authToken, deviceUniqueId, GoodieModel.setChangePassword(memberId, merchantId, password,
+                                                                                           confirmPassword, passwordOld, username, context));
     }
 
 
@@ -339,6 +362,20 @@ public enum GoodieApis {
                                                              @Query("nRecords") Integer nRecords,
                                                              @Query("page") Integer page
         );
+
+        //UPDATE MEMBER PROFILE
+        @Headers("Content-Type:application/json")
+        @POST("member/update/profile")
+        Observable<UpdateMemberProfileResponse> updateProfile(@Header("authToken")  String authToken,
+                                                             @Header("deviceUniqueId")  String deviceUniqId,
+                                                             @Body UpdateMemberProfileRequest request);
+
+        // CHANGE PASSWORD MEMBER
+        @Headers("Content-Type:application/json")
+        @POST("member/change/password ")
+        Observable<ChangePasswordResponse> changePassword(@Header("authToken")  String authToken,
+                                                              @Header("deviceUniqueId")  String deviceUniqId,
+                                                              @Body ChangePasswordRequest request);
 
 
     }

@@ -5,6 +5,8 @@ import com.goodie.sdk.android.Util.Constant;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
 import com.goodie.sdk.android.data.bean.RewardsReq;
+import com.goodie.sdk.android.data.builder.ChangePasswordBuilder;
+import com.goodie.sdk.android.data.builder.ListPointTransactionBuilder;
 import com.goodie.sdk.android.data.builder.LoginBuilder;
 import com.goodie.sdk.android.data.builder.MemberPointBuilder;
 import com.goodie.sdk.android.data.builder.MemberProfileBuilder;
@@ -19,6 +21,7 @@ import com.goodie.sdk.android.data.builder.PromotionPostingCustomIssuingBuilder;
 import com.goodie.sdk.android.data.builder.RegisterBuilder;
 import com.goodie.sdk.android.data.builder.RewardListBuilder;
 import com.goodie.sdk.android.data.builder.RewardRedeemptionBuilder;
+import com.goodie.sdk.android.data.builder.UpdateMemberProfileBuilder;
 import com.goodie.sdk.android.data.builder.VerificationBuilder;
 import com.goodie.sdk.android.data.builder.VoucherBalanceBuilder;
 import com.goodie.sdk.android.data.builder.VoucherUsageBuilder;
@@ -150,6 +153,25 @@ public class Goodie{
     //voucher balance
     public static VoucherBalanceBuilder setVoucherBalance(String authToken, String deviceUniqId, String voucherbalanceId, String memberId, String merchantId, int orderBy, int orderType, int nRecords, int page){
         return GoodieCore.setVoucherBalanceBuilder(authToken, deviceUniqId, voucherbalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
+
+    //LIST POINT TRANSACTION
+    public static ListPointTransactionBuilder setListPointTransaction(String authToken, String deviceUniqueId, String memberId, String merchantId,
+                                                                      int trxType, int orderBy, int orderType, int nRecords, int page) {
+        return GoodieCore.setListPointTransactionBuilder(authToken, deviceUniqueId, memberId, merchantId, trxType, orderBy, orderType, nRecords, page);
+    }
+
+    // UPDATE MEMBER PROFILE
+    public static UpdateMemberProfileBuilder setUpdateMemberProfile(String authToken, String deviceUniqueId, String memberId, String merchantId,
+                                                                    String birthDate, String firstName, String lastName, String gender, String phoneNumber) {
+        return GoodieCore.setUpdateMemberProfileBuilder(authToken, deviceUniqueId, memberId, merchantId, birthDate, firstName, lastName, gender, phoneNumber);
+    }
+
+    //CHANGE PASSWORD
+    public static ChangePasswordBuilder setChangePassword(String authToken, String deviceUniqueId, String memberId, String merchantId, String password,
+                                                          String confirmPassword, String passwordOld, String username) {
+
+        return GoodieCore.setChangePasswordBuilder(authToken, deviceUniqueId, memberId, merchantId, password, confirmPassword, passwordOld, username);
     }
 
     @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)

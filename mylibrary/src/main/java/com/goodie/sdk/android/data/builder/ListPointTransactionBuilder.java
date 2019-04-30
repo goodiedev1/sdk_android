@@ -7,6 +7,9 @@ import com.goodie.sdk.android.data.listener.SetListPointTransactionListener;
 import com.goodie.sdk.android.data.response.ListPointTransactionResponse;
 
 import rx.Observable;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by goodiemac1 on 26/04/19.
@@ -41,6 +44,11 @@ public class ListPointTransactionBuilder {
 
     public void historyPointGoodie(Context context, SetListPointTransactionListener listener) {
 
+        historyPointObserv(authToken, deviceUniqueId, memberId, merchantId, trxType,
+                orderBy, orderType, nRecords, page, context)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(listener::onSuccess, listener::onError);
 
     }
 

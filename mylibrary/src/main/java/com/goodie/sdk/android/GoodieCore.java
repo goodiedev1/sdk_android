@@ -4,6 +4,8 @@ import android.support.annotation.RestrictTo;
 import com.goodie.sdk.android.data.bean.BasicRulesReq;
 import com.goodie.sdk.android.data.bean.CustomRulesReq;
 import com.goodie.sdk.android.data.bean.RewardsReq;
+import com.goodie.sdk.android.data.builder.ChangePasswordBuilder;
+import com.goodie.sdk.android.data.builder.ListPointTransactionBuilder;
 import com.goodie.sdk.android.data.builder.LoginBuilder;
 import com.goodie.sdk.android.data.builder.MemberPointBuilder;
 import com.goodie.sdk.android.data.builder.MemberProfileBuilder;
@@ -18,6 +20,7 @@ import com.goodie.sdk.android.data.builder.PromotionPostingCustomIssuingBuilder;
 import com.goodie.sdk.android.data.builder.RegisterBuilder;
 import com.goodie.sdk.android.data.builder.RewardListBuilder;
 import com.goodie.sdk.android.data.builder.RewardRedeemptionBuilder;
+import com.goodie.sdk.android.data.builder.UpdateMemberProfileBuilder;
 import com.goodie.sdk.android.data.builder.VerificationBuilder;
 import com.goodie.sdk.android.data.builder.VoucherBalanceBuilder;
 import com.goodie.sdk.android.data.builder.VoucherUsageBuilder;
@@ -52,7 +55,7 @@ public class GoodieCore{
      * </pre>
      *
      * @param application Application instance
-     * @param goodieAppId Your goodie application Id
+     *
      */
     public static void init(Application application, String qiscusAppId){
         initWithCustomServer(application, qiscusAppId, "");
@@ -176,6 +179,26 @@ public class GoodieCore{
     public static VoucherBalanceBuilder setVoucherBalanceBuilder(String authToken, String deviceUniqId, String voucherBalanceId,
                                                              String memberId, String merchantId, int orderBy, int orderType, int nRecords, int page){
         return new VoucherBalanceBuilder(authToken, deviceUniqId, voucherBalanceId, memberId, merchantId, orderBy, orderType, nRecords, page);
+    }
+
+    // LIST POINT HISTORY
+    public static ListPointTransactionBuilder setListPointTransactionBuilder(String authToken, String deviceUniqueId, String memberId, String merchantId,
+                                                                             int trxType, int orderBy, int orderType, int nRecords, int page) {
+
+        return new ListPointTransactionBuilder(authToken, deviceUniqueId, memberId, merchantId, trxType, orderBy, orderType, nRecords, page);
+    }
+
+    // UPDATE MEMBER PROFILE
+    public static UpdateMemberProfileBuilder setUpdateMemberProfileBuilder(String authToken, String deviceUniqueId, String memberId, String merchantId,
+                                                                           String birthDate, String firstName, String lastName, String gender, String phoneNumber) {
+        return new UpdateMemberProfileBuilder(authToken, deviceUniqueId, memberId, merchantId, birthDate, firstName, lastName, gender, phoneNumber);
+    }
+
+    //CHANGE PASSWORD
+    public static ChangePasswordBuilder setChangePasswordBuilder(String authToken, String deviceUniqueId, String memberId, String merchantId, String password,
+                                                          String confirmPassword, String passwordOld, String username) {
+
+        return new ChangePasswordBuilder(authToken, deviceUniqueId, memberId, merchantId, password, confirmPassword, passwordOld, username);
     }
 
 
