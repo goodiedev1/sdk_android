@@ -15,11 +15,11 @@ public class PointTransaction {
 
     @SerializedName("issuing")
     @Expose
-    private List<IssuingResp> issuing;
+    private IssuingResp issuing;
 
     @SerializedName("redeem")
     @Expose
-    private List<RedeemResp> redeem;
+    private RedeemResp redeem;
 
     public Integer getTrxType() {
         return trxType;
@@ -29,19 +29,19 @@ public class PointTransaction {
         this.trxType = trxType;
     }
 
-    public List<IssuingResp> getIssuing() {
+    public IssuingResp getIssuing() {
         return issuing;
     }
 
-    public void setIssuing(List<IssuingResp> issuing) {
+    public void setIssuing(IssuingResp issuing) {
         this.issuing = issuing;
     }
 
-    public List<RedeemResp> getRedeem() {
+    public RedeemResp getRedeem() {
         return redeem;
     }
 
-    public void setRedeem(List<RedeemResp> redeem) {
+    public void setRedeem(RedeemResp redeem) {
         this.redeem = redeem;
     }
 }
