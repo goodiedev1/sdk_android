@@ -16,8 +16,8 @@ public class LoginRequest {
     @SerializedName("password")
     private String password;
 
-    @SerializedName("merchantId")
-    private String merchantId;
+    @SerializedName("merchantCode")
+    private String merchantCode;
 
     public String getPassword() {
         return password;
@@ -43,12 +43,12 @@ public class LoginRequest {
         this.username = username;
     }
 
-    public String getMerchantId() {
-        return merchantId;
+    public String getMerchantCode() {
+        return merchantCode;
     }
 
-    public void setMerchantId(String merchantId) {
-        this.merchantId = merchantId;
+    public void setMerchantCode(String merchantCode) {
+        this.merchantCode = merchantCode;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class LoginRequest {
                 "LoginReq{" +
                         "password = '" + password + '\'' +
                         ",deviceUniqueId = '" + deviceUniqueId + '\'' +
-                        ",merchantId = '" + merchantId + '\'' +
+                        ",merchantId = '" + merchantCode + '\'' +
                         ",username = '" + username + '\'' +
                         "}";
     }

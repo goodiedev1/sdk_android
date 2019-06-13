@@ -95,8 +95,8 @@ public enum GoodieApis {
     }
 
 
-    public Observable<LoginResponse> doLogin(String deviceUniqId, String username, String password, String merchantId, Context context){
-        return api.login(GoodieModel.setLoginRequest(deviceUniqId, username, password, merchantId, context));
+    public Observable<LoginResponse> doLogin(String deviceUniqId, String username, String password, String merchantCode, Context context){
+        return api.login(GoodieModel.setLoginRequest(deviceUniqId, username, password, merchantCode, context));
     }
 
     public Observable<RegisterResponse> doRegister(String username, String merchantId, String phoneNumber,
@@ -372,7 +372,7 @@ public enum GoodieApis {
 
         // CHANGE PASSWORD MEMBER
         @Headers("Content-Type:application/json")
-        @POST("member/change/password ")
+        @POST("member/change/password")
         Observable<ChangePasswordResponse> changePassword(@Header("authToken")  String authToken,
                                                               @Header("deviceUniqueId")  String deviceUniqId,
                                                               @Body ChangePasswordRequest request);

@@ -16,24 +16,24 @@ public class LoginBuilder {
     private String deviceUniqId;
     private String password;
     private String username;
-    private String merchantId;
+    private String merchantCode;
 
-    public LoginBuilder(String deviceUniqId, String username, String password, String merchantId){
+    public LoginBuilder(String deviceUniqId, String username, String password, String merchantCode){
         this.deviceUniqId = deviceUniqId;
         this.username = username;
         this.password = password;
-        this.merchantId = merchantId;
+        this.merchantCode = merchantCode;
     }
 
     public void loginGoodie(Context context, SetLoginListener listener){
-        loginObserv(deviceUniqId, username,  password,  merchantId, context)
+        loginObserv(deviceUniqId, username,  password,  merchantCode, context)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(listener::onSuccess, listener::onError);
     }
 
-    public Observable<LoginResponse> loginObserv(String deviceUniqId, String username, String password, String merchantId, Context context){
-        return GoodieApis.getInstance().doLogin(deviceUniqId, username, password, merchantId, context);
+    public Observable<LoginResponse> loginObserv(String deviceUniqId, String username, String password, String merchantCode, Context context){
+        return GoodieApis.getInstance().doLogin(deviceUniqId, username, password, merchantCode, context);
     }
 
 }

@@ -69,8 +69,8 @@ public class GoodieCore{
     }
 
     //login user
-    public static LoginBuilder setLoginUser(String deviceUniqId, String userEmail, String password, String merchantId){
-        return new LoginBuilder(deviceUniqId, userEmail, password, merchantId);
+    public static LoginBuilder setLoginUser(String deviceUniqId, String userEmail, String password, String merchantCode){
+        return new LoginBuilder(deviceUniqId, userEmail, password, merchantCode);
     }
 
     //register user

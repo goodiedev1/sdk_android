@@ -45,8 +45,8 @@ public class Goodie{
     }
 
     //login goodie
-    public static LoginBuilder setLogin(String deviceUniqId, String userEmail, String password, String merchantId){
-        return GoodieCore.setLoginUser(deviceUniqId, userEmail, password, merchantId);
+    public static LoginBuilder setLogin(String deviceUniqId, String userEmail, String password, String merchantCode){
+        return GoodieCore.setLoginUser(deviceUniqId, userEmail, password, merchantCode);
     }
 
     //register goodie
